@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bob Builder - Engineering & Tech Tutor - Learnify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet"> {/* Added Orbitron for techy headings */}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .profile-hero-bob {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.9)), url('../images/action-shots/bob-tech-bg.jpg') no-repeat center center;
+            background-size: cover;
+            color: #e6f1ff; /* Light blueish white */
+            padding: 80px 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-bob-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #00aeff; /* Bright blue accent */
+            box-shadow: 0 0 25px rgba(0, 174, 255, 0.5);
+        }
+        .hero-bob-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            font-size: 3.5rem;
+        }
+        .hero-bob-content .lead {
+            font-size: 1.25rem;
+            color: #cdd6f4; /* Lighter text for lead */
+            margin-bottom: 1.5rem;
+        }
+        .tech-badge {
+            background-color: #00aeff;
+            color: white;
+            font-size: 0.9rem;
+            margin: 2px;
+        }
+
+        .bob-section h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #0a192f; /* Dark blue */
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .nav-tabs-bob .nav-link {
+            color: #007BFF;
+            border: 1px solid transparent;
+            border-bottom: 3px solid transparent;
+        }
+        .nav-tabs-bob .nav-link.active {
+            color: #0a192f;
+            border-color: #dee2e6 #dee2e6 #fff;
+            border-bottom: 3px solid #00aeff;
+            font-weight: bold;
+        }
+        .tab-content-bob {
+            background-color: #ffffff;
+            padding: 25px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 0.25rem 0.25rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #334257; /* Dark grayish blue */
+        }
+        .detail-item .icon {
+            color: #00aeff;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px; /* Fixed width for alignment */
+            text-align: center;
+        }
+        .social-links-bob a {
+            color: #007BFF;
+            margin: 0 10px;
+            font-size: 1.8rem;
+        }
+        .social-links-bob a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <header class="profile-hero-bob">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="../images/profile-pics/bob-builder.jpg" alt="Bob Builder" class="hero-bob-img">
+                </div>
+                <div class="col-md-8 hero-bob-content" data-aos="fade-left">
+                    <h1>Bob Builder</h1>
+                    <p class="lead">Expert Tutor in Engineering, Physics & Computer Science</p>
+                    <div>
+                        <span class="badge tech-badge">Robotics</span>
+                        <span class="badge tech-badge">Programming (Python, C++)</span>
+                        <span class="badge tech-badge">Applied Mechanics</span>
+                        <span class="badge tech-badge">Circuit Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 mb-5 bob-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav nav-tabs nav-tabs-bob mb-0" id="bobProfileTab" role="tablist" data-aos="fade-up">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="bio-tab" data-bs-toggle="tab" data-bs-target="#bio-content" type="button" role="tab" aria-controls="bio-content" aria-selected="true">
+                            <i class="fas fa-user-tie me-2"></i>My Profile
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="expertise-tab" data-bs-toggle="tab" data-bs-target="#expertise-content" type="button" role="tab" aria-controls="expertise-content" aria-selected="false">
+                            <i class="fas fa-cogs me-2"></i>Expertise
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="logistics-tab-bob" data-bs-toggle="tab" data-bs-target="#logistics-content-bob" type="button" role="tab" aria-controls="logistics-content-bob" aria-selected="false">
+                            <i class="fas fa-calendar-check me-2"></i>Schedule & Details
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content tab-content-bob" id="bobProfileTabContent" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tab-pane fade show active p-4" id="bio-content" role="tabpanel" aria-labelledby="bio-tab">
+                        <h2>About Me</h2>
+                        <p>With a Master's degree in Mechanical Engineering and over 10 years in the tech industry, I bring real-world application to my teaching. I am passionate about demystifying complex STEM concepts and helping students build a strong foundational understanding. My approach is problem-driven, focusing on practical skills and critical thinking. I've successfully mentored students preparing for university, competitive exams, and personal projects.</p>
+                        <p>My goal is to ignite curiosity and equip students with the tools to innovate and solve challenges.</p>
+                    </div>
+                    <div class="tab-pane fade p-4" id="expertise-content" role="tabpanel" aria-labelledby="expertise-tab">
+                        <h2>Areas of Expertise & Experience</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Subjects Taught:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-square-root-alt"></i></span>Advanced Physics (Mechanics, E&M)</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-laptop-code"></i></span>Computer Programming (Python, Java, C++)</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-robot"></i></span>Introduction to Robotics</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-drafting-compass"></i></span>Engineering Design Principles</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-calculator"></i></span>Calculus & Linear Algebra</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Professional Background:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-briefcase"></i></span>Senior Engineer, Tech Solutions Inc. (2015-2023)</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-flask"></i></span>Research Assistant, University Labs (2013-2015)</li>
+                                    <li class="detail-item"><span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>Private Tutor (STEM Subjects) (2012-Present)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade p-4" id="logistics-content-bob" role="tabpanel" aria-labelledby="logistics-tab-bob">
+                        <h2>Logistics</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="detail-item"><span class="icon"><i class="fas fa-clock"></i></span><strong>Available Hours:</strong> Weekdays 6 PM - 9 PM, Weekends 9 AM - 5 PM</p>
+                                <p class="detail-item"><span class="icon"><i class="fas fa-map-marked-alt"></i></span><strong>Locations:</strong> Downtown Tech Hub, Online (Zoom, Skype)</p>
+                            </div>
+                             <div class="col-md-6">
+                                <p class="detail-item"><span class="icon"><i class="fas fa-layer-group"></i></span><strong>Grades Taught:</strong> High School (AP), College (Undergrad), Professionals</p>
+                                <p class="detail-item"><span class="icon"><i class="fas fa-comments"></i></span><strong>Communication:</strong> English</p>
+                             </div>
+                        </div>
+                        <hr>
+                        <h5 class="mt-3">Connect with Bob</h5>
+                        <div class="social-links-bob mt-2">
+                            <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:bob.builder@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

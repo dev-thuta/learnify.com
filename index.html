@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnify - Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* --- Hero Banner --- */
+        .hero-banner {
+            background: url('images/hero-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 70vh; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative; /* For overlay */
+        }
+        .hero-banner::before { /* Optional overlay for better text readability */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .hero-content {
+            position: relative; /* To be above the overlay */
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            color: white; /* Override global heading color for hero */
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .btn-explore {
+            background-color: #28A745; /* Accent green */
+            border-color: #28A745;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-explore:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 60px 0;
+            background-color: #F8F9FA; /* Light grey background */
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <header class="hero-banner" data-aos="fade-in" data-aos-duration="1000">
+        <div class="hero-content">
+            <h1 data-aos="fade-down" data-aos-delay="200">Welcome to Learnify</h1>
+            <p data-aos="fade-up" data-aos-delay="400">Discover talented teachers ready to inspire.</p>
+            <a href="teachers.html" class="btn btn-primary btn-lg btn-explore" data-aos="zoom-in" data-aos-delay="600">Explore Teachers</a>
+        </div>
+    </header>
+
+    <section class="intro-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2 data-aos="fade-right">What is Learnify?</h2>
+                    <p data-aos="fade-left" data-aos-delay="100">
+                        Learnify is a dedicated platform designed to connect students and parents with qualified and passionate teachers.
+                        Browse profiles, discover expertise, and find the perfect educator for your learning journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-center">
+        <div class="container">
+            <h2 data-aos="fade-up">Meet Our Featured Educators</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Handpicked for their excellence and dedication.</p>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/profile-pics/jane-doe.jpg" class="card-img-top" alt="Featured Teacher 1" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Jane Doe</h5>
+                            <p class="card-text">Expert in Mathematics</p>
+                            <a href="teacher-profiles/teacher-jane-doe.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/profile-pics/john-smith.jpg" class="card-img-top" alt="Featured Teacher 2" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. John Smith</h5>
+                            <p class="card-text">Passionate about History</p>
+                            <a href="teacher-profiles/teacher-john-smith.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <a href="featured-teachers.html" class="btn btn-secondary mt-3" data-aos="fade-up" data-aos-delay="400">See All Featured Teachers</a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
