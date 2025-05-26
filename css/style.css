@@ -10,7 +10,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #007BFF; /* Primary color for headings */
+    color: hsl(25, 50%, 20%); /* wood color for headings */
 }
 
 .navbar-brand img {
@@ -39,7 +39,7 @@ footer .fab { /* Font Awesome icons in footer */
     transition: color 0.3s ease;
 }
 footer .fab:hover {
-    color: #007BFF; /* Primary color on hover */
+    color: hsl(25, 80%, 10%); /* wood color on hover */
 }
 
 /* --- Utility Classes for Animations (can be expanded) --- */
@@ -65,3 +65,7 @@ footer .fab:hover {
 }
 
 /* Add more as needed */
+
+.text-wood {
+    color: hsl(25, 50%, 20%);
+}

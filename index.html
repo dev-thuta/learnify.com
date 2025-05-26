@@ -14,7 +14,7 @@
     <style>
         /* --- Hero Banner --- */
         .hero-banner {
-            background: url('images/hero-banner.jpg') no-repeat center center;
+            background: url('images/background-and-stuff/photo-1498243691581-b145c3f54a5a.avif') no-repeat center center;
             background-size: cover;
             color: white;
             height: 70vh; /* Adjust as needed */
@@ -48,14 +48,15 @@
             margin-bottom: 2rem;
         }
         .btn-explore {
-            background-color: #28A745; /* Accent green */
-            border-color: #28A745;
+            background-color: hsl(25, 50%, 20%); /* Dark wood color */
+            border-color: transparent;
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .btn-explore:hover {
-            background-color: #218838;
+            background-color: hsl(25, 80%, 10%);
+            border-color: transparent;
             transform: translateY(-2px);
         }
 
@@ -72,8 +73,8 @@
     <header class="hero-banner" data-aos="fade-in" data-aos-duration="1000">
         <div class="hero-content">
             <h1 data-aos="fade-down" data-aos-delay="200">Welcome to Learnify</h1>
-            <p data-aos="fade-up" data-aos-delay="400">Discover talented teachers ready to inspire.</p>
-            <a href="teachers.html" class="btn btn-primary btn-lg btn-explore" data-aos="zoom-in" data-aos-delay="600">Explore Teachers</a>
+            <p data-aos="fade-up" data-aos-delay="400">Discover talented teachers, ready to inspire.</p>
+            <a href="teachers.html" class="btn btn-dark btn-lg btn-explore fw-bold" data-aos="zoom-in" data-aos-delay="600">Explore Teachers</a>
         </div>
     </header>
 
@@ -98,26 +99,36 @@
             <div class="row mt-4">
                 <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="200">
                     <div class="card h-100 shadow-sm">
-                        <img src="images/profile-pics/jane-doe.jpg" class="card-img-top" alt="Featured Teacher 1" style="height: 200px; object-fit: cover;">
+                        <img src="images/profile-pics/Character_Kafka_Splash_Art.webp" class="img-fluid" alt="Featured Teacher 1" style="max-height: 200px; object-fit: scale-down;">
                         <div class="card-body">
-                            <h5 class="card-title">Dr. Jane Doe</h5>
+                            <h5 class="card-title">Tr. Kafka</h5>
                             <p class="card-text">Expert in Mathematics</p>
-                            <a href="teacher-profiles/teacher-jane-doe.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+                            <a href="teacher-profiles/teacher-kafka.html" class="btn btn-outline-dark btn-sm">View Profile</a>
                         </div>
                     </div>
                 </div>
-                 <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
                     <div class="card h-100 shadow-sm">
-                        <img src="images/profile-pics/john-smith.jpg" class="card-img-top" alt="Featured Teacher 2" style="height: 200px; object-fit: cover;">
+                        <img src="images/profile-pics/firefly_card.webp" class="card-img-top" alt="Featured Teacher 2" style="max-height: 200px; object-fit: scale-down;">
                         <div class="card-body">
-                            <h5 class="card-title">Mr. John Smith</h5>
+                            <h5 class="card-title">Sir. SAM</h5>
                             <p class="card-text">Passionate about History</p>
-                            <a href="teacher-profiles/teacher-john-smith.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+                            <a href="teacher-profiles/teacher-john-smith.html" class="btn btn-outline-dark btn-sm">View Profile</a>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="card h-100 shadow-sm">
+                        <img src="images/profile-pics//castorice_card.webp" class="card-img-top" alt="Featured Teacher 2" style="max-height: 200px; object-fit: scale-down;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ms. Castorice</h5>
+                            <p class="card-text">Expert in English Literature</p>
+                            <a href="teacher-profiles/teacher-john-smith.html" class="btn btn-outline-dark btn-sm">View Profile</a>
+                        </div>
+                    </div>
                 </div>
-            <a href="featured-teachers.html" class="btn btn-secondary mt-3" data-aos="fade-up" data-aos-delay="400">See All Featured Teachers</a>
+            </div>
+            <a href="featured-teachers.html" class="btn btn-outline-dark mt-3 fw-bold" data-aos="fade-up" data-aos-delay="400">See All Featured Teachers</a>
         </div>
     </section>
 
