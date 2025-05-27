@@ -2,7 +2,7 @@ const teachers = [
         {
             name: "Tr. Kafka",
             img: "images/profile-pics/Character_Kafka_Splash_Art.webp",
-            alt: "Teacher Jane Doe",
+            alt: "Teacher Kafka",
             subjects: ["Mathematics", "History"],
             grades: ["High School", "College"],
             location: "Springfield",
@@ -12,7 +12,7 @@ const teachers = [
         {
             name: "Sir. SAM",
             img: "images/profile-pics/firefly_card.webp",
-            alt: "Teacher John Smith",
+            alt: "Teacher Firefly (SAM)",
             subjects: ["Science", "English"],
             grades: ["Middle School"],
             location: "Oakville",
@@ -20,13 +20,13 @@ const teachers = [
             description: "Dedicated to making complex topics accessible and engaging for students."
         },
         {
-            name: "Ms. Sarah Lee",
-            img: "images/profile-pics/sarah-lee.jpg",
-            alt: "Teacher Sarah Lee",
+            name: "Ms. Castorice",
+            img: "images/profile-pics/castorice_card.webp",
+            alt: "Teacher Cas",
             subjects: ["Music"],
             grades: ["Primary", "Middle School"],
             location: "Riverdale",
-            profile: "teacher-profiles/teacher-sarah-lee.html",
+            profile: "teacher-profiles/teacher-castorice.html",
             description: "Bringing creativity and joy to music education for young learners."
         }
     ];

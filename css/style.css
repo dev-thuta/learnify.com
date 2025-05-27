@@ -25,7 +25,51 @@ h6 {
 .navbar-brand img {
     margin-right: 8px;
 }
+/* --- Custom Bootstrap Buttons --- */
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(25, 25, 25, 0.04);
+    border: none;
+}
 
+.btn-primary {
+    background-color: hsl(25, 50%, 20%);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: hsl(25, 80%, 10%);
+    color: #fff;
+}
+
+.btn-outline-primary {
+    color: hsl(25, 50%, 20%);
+    border: 2px solid hsl(25, 50%, 20%);
+    background: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: hsl(25, 50%, 20%);
+    color: #fff;
+    border-color: hsl(25, 80%, 10%);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #495057;
+    color: #fff;
+}
 /* --- Animation Specific Styling --- */
 /* Example: Smooth scroll for anchor links */
 html {
@@ -400,15 +444,203 @@ footer .fab:hover {
     object-fit: cover;
 }
 
-.filters .form-select,
-.filters .form-control {
-    /* Style for filter dropdowns */
-    margin-bottom: 10px;
-}
-
 /* Animation for card loading/filtering - can be enhanced */
 .teacher-card.aos-animate {
     /* Ensure AOS animations apply correctly */
     opacity: 1 !important;
     /* Override AOS initial opacity if needed */
+}
+
+.filter-link {
+    color: hsl(25, 50%, 20%);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    margin: 0 0.2em;
+    display: inline-block;
+}
+
+.filter-link.active,
+.filter-link:hover,
+.filter-link:focus {
+    background: hsl(25, 50%, 20%);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* teacher profile 3 */
+
+.profile-hero-mark {
+    background: #ede7f6;
+    /* Deep Navy Blue */
+    /* Optional: Add subtle pattern or image background if desired */
+    /* background: linear-gradient(rgba(0, 31, 63, 0.95), rgba(0, 31, 63, 0.85)), url('../images/action-shots/mark-office-bg.jpg') no-repeat center center; */
+    /* background-size: cover; */
+    color: #ffffff;
+    padding: 60px 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-mark-img-container {
+    text-align: center;
+}
+
+.hero-mark-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Slightly rounded square for a modern look */
+    border: transparent;
+}
+
+.hero-mark-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    /* Slightly smaller for a more refined look */
+    margin-bottom: 0.5rem;
+    color: #b39ddb;
+}
+
+.hero-mark-content .title-mark {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #b39ddb;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.hero-mark-content .lead {
+    font-size: 1.1rem;
+    max-width: 90%;
+    color: #000400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-mark-content .credentials {
+    font-size: 0.9rem;
+    color: #000400;
+}
+
+.hero-mark-content .credentials i {
+    margin-right: 5px;
+    color: #b39ddb;
+}
+
+.mark-section {
+    padding: 50px 0;
+}
+
+.mark-section .section-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: hsl(25, 80%, 10%);
+    /* Navy Blue */
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.mark-section .section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #b39ddb;
+    /* Primary Blue */
+    margin: 10px auto 0;
+}
+
+.content-box-mark {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+}
+
+.content-box-mark h3 {
+    font-family: 'Raleway', sans-serif;
+    color: hsl(25, 80%, 10%);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.experience-item-mark {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.experience-item-mark:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-item-mark h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: #001f3f;
+    margin-bottom: 5px;
+}
+
+.experience-item-mark .company-duration {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.skill-item-mark {
+    margin-bottom: 15px;
+}
+
+.skill-item-mark .skill-name {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.progress-bar-mark {
+    background-color: #b39ddb;
+    /* Primary blue for progress */
+    height: 10px !important;
+    /* Bootstrap default is 1rem, making it thinner */
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.contact-button-mark {
+    background-color: hsl(25, 50%, 20%);
+    border-color: transparent;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button-mark:hover {
+    background-color: hsl(25, 80%, 10%);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.social-links-mark a {
+    color: hsl(0, 10%, 30%);
+    margin: 0 10px;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.social-links-mark a:hover {
+    color: hsl(25, 80%, 10%);
 }
