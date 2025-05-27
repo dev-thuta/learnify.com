@@ -36,39 +36,28 @@ h6 {
     border: none;
 }
 
-.btn-primary {
+.btn-wood {
     background-color: hsl(25, 50%, 20%);
     color: #fff;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
+.btn-wood:hover,
+.btn-wood:focus {
     background-color: hsl(25, 80%, 10%);
     color: #fff;
 }
 
-.btn-outline-primary {
+.btn-outline-wood {
     color: hsl(25, 50%, 20%);
     border: 2px solid hsl(25, 50%, 20%);
     background: transparent;
 }
 
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
+.btn-outline-wood:hover,
+.btn-outline-wood:focus {
     background-color: hsl(25, 50%, 20%);
     color: #fff;
     border-color: hsl(25, 80%, 10%);
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    color: #fff;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-    background-color: #495057;
-    color: #fff;
 }
 /* --- Animation Specific Styling --- */
 /* Example: Smooth scroll for anchor links */
