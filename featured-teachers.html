@@ -83,38 +83,45 @@
         ];
 
         function createTeacherCard(teacher) {
-            return `
-            <div class="col-md-4 mb-4${teacher.hideMd ? ' d-none d-md-block' : ''}${teacher.hideLg ? ' d-none d-lg-block' : ''}" data-aos="slide-up" data-aos-delay="${teacher.delay || 100}">
-                <div class="card featured-teacher-card h-100 shadow-sm">
-                    <img src="${teacher.img}" class="card-img-top" alt="${teacher.alt}" style="max-height: 200px; object-fit: scale-down;">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">${teacher.name}</h5>
-                        <span class="badge ${teacher.badge.class} mb-2">${teacher.badge.text}</span>
-                        <p class="card-text small">${teacher.desc}</p>
-                        <a href="${teacher.profile}" class="btn btn-outline-wood btn-sm">View Profile</a>
-                    </div>
-                </div>
+    return `
+    <div class="col-md-4 mb-4" data-aos="slide-up" data-aos-delay="${teacher.delay || 100}">
+        <div class="card featured-teacher-card h-100 shadow-sm">
+            <img src="${teacher.img}" class="card-img-top" alt="${teacher.alt}" style="max-height: 200px; object-fit: scale-down;">
+            <div class="card-body text-center">
+                <h5 class="card-title">${teacher.name}</h5>
+                <span class="badge ${teacher.badge.class} mb-2">${teacher.badge.text}</span>
+                <p class="card-text small">${teacher.desc}</p>
+                <a href="${teacher.profile}" class="btn btn-outline-wood btn-sm">View Profile</a>
             </div>
-            `;
-        }
+        </div>
+    </div>
+    `;
+}
 
         function renderCarousel() {
+            const isMobile = window.innerWidth < 768; // adjust if needed
+            let allTeachers = teachers.flat(); // flatten all into one array
+            let slides = [];
+
+            if (isMobile) {
+                // One card per slide
+                slides = allTeachers.map(t => [t]);
+            } else {
+                // Use your existing grouping
+                slides = teachers;
+            }
+
             let indicators = '';
             let inner = '';
-            teachers.forEach((slide, i) => {
+            slides.forEach((slide, i) => {
                 indicators += `<button type="button" data-bs-target="#featuredTeachersCarousel" data-bs-slide-to="${i}"${i===0?' class="active" aria-current="true"':''} aria-label="Slide ${i+1}"></button>`;
                 let row = '<div class="row justify-content-center">';
                 slide.forEach((teacher, idx) => {
-                    // Responsive hiding for 2nd and 3rd cards in first slide
-                    if (i === 0) {
-                        if (idx === 1) teacher.hideMd = true;
-                        if (idx === 2) teacher.hideLg = true;
-                        teacher.delay = (idx+1)*100;
-                    }
+                    teacher.delay = (idx + 1) * 100;
                     row += createTeacherCard(teacher);
                 });
                 row += '</div>';
-                inner += `<div class="carousel-item${i===0?' active':''}">${row}</div>`;
+                inner += `<div class="carousel-item${i === 0 ? ' active' : ''}">${row}</div>`;
             });
 
             document.getElementById('featuredTeachersCarouselContainer').innerHTML = `
@@ -134,6 +141,12 @@
         }
 
         renderCarousel();
+
+        // Optional: re-render on resize
+        window.addEventListener('resize', () => {
+            clearTimeout(window._resizeTimeout);
+            window._resizeTimeout = setTimeout(renderCarousel, 300);
+        });
         </script>
     </main>
 
