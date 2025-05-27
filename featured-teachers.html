@@ -11,57 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .featured-teacher-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden; /* Ensures image corners are rounded with the card */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .featured-teacher-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
-        }
-        .featured-teacher-card .card-img-top {
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 3px solid #007BFF; /* Accent color border */
-        }
-        .featured-teacher-card .card-body {
-            padding: 1.5rem;
-        }
-        .featured-teacher-card .card-title {
-            color: #007BFF; /* Primary color */
-        }
-        .featured-teacher-card .badge {
-            font-size: 0.9rem;
-            padding: 0.5em 0.75em;
-        }
-        .carousel-item {
-            /* Add padding for multiple items if using a multi-item carousel setup */
-        }
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: rgba(0,0,0,0.5);
-            border-radius: 50%;
-            padding: 15px; /* Increase padding to make controls larger */
-        }
-
-        /* Specific styling for "Teacher of the Month" section */
-        .teacher-of-the-month {
-            background-color: #e9f5ff; /* Light blue highlight */
-            padding: 40px 20px;
-            border-radius: 15px;
-            border: 2px dashed #007BFF;
-        }
-        .teacher-of-the-month img {
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .teacher-of-the-month .display-4 {
-            color: #0056b3; /* Darker blue for emphasis */
-        }
-    </style>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -75,14 +24,14 @@
         <section class="teacher-of-the-month text-center my-5 p-5 shadow-lg" data-aos="zoom-in-out">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <img src="images/profile-pics/jane-doe.jpg" alt="Teacher of the Month" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
+                    <img src="images/profile-pics/firefly_card.webp" alt="Teacher of the Month" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
                 </div>
                 <div class="col-md-8 text-md-start text-center">
                     <h2 class="display-4">Teacher of the Month</h2>
-                    <h3>Dr. Jane Doe</h3>
+                    <h3 style="background-image: linear-gradient(to right, hsl(25, 50%, 20%), hsl(0, 0%, 100%)); -webkit-background-clip: text; color: transparent; background-clip: text;">Sir. SAM</h3>
                     <p class="lead">"A beacon of inspiration in Mathematics and History."</p>
                     <p>Dr. Doe consistently goes above and beyond, fostering a dynamic and inclusive learning environment. Her innovative teaching methods and dedication have profoundly impacted her students.</p>
-                    <a href="teacher-profiles/teacher-jane-doe.html" class="btn btn-primary btn-lg">View Profile <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="teacher-profiles/teacher-sam.html" class="btn btn-wood btn-lg">View Profile <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </section>
@@ -91,62 +40,87 @@
 
         <section class="mt-5" data-aos="fade-up">
             <h2 class="text-center mb-4">More Featured Teachers</h2>
-            <div id="featuredTeachersCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#featuredTeachersCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#featuredTeachersCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-md-4 mb-4" data-aos="slide-up" data-aos-delay="100">
-                                <div class="card featured-teacher-card h-100 shadow-sm">
-                                    <img src="images/profile-pics/john-smith.jpg" class="card-img-top" alt="Mr. John Smith">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Mr. John Smith</h5>
-                                        <span class="badge bg-success mb-2">Science Whiz</span>
-                                        <p class="card-text small">Making complex science fun and understandable for middle schoolers.</p>
-                                        <a href="teacher-profiles/teacher-john-smith.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4 d-none d-md-block" data-aos="slide-up" data-aos-delay="200"> <div class="card featured-teacher-card h-100 shadow-sm">
-                                    <img src="images/profile-pics/sarah-lee.jpg" class="card-img-top" alt="Ms. Sarah Lee">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Ms. Sarah Lee</h5>
-                                         <span class="badge bg-info mb-2">Music Maestro</span>
-                                        <p class="card-text small">Inspiring creativity through engaging music lessons for all ages.</p>
-                                        <a href="teacher-profiles/teacher-sarah-lee.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                             <div class="col-md-4 mb-4 d-none d-lg-block" data-aos="slide-up" data-aos-delay="300">
-                                <div class="card featured-teacher-card h-100 shadow-sm">
-                                    <img src="images/profile-pics/david-chen.jpg" class="card-img-top" alt="Mr. David Chen"> <div class="card-body text-center">
-                                        <h5 class="card-title">Mr. David Chen</h5>
-                                        <span class="badge bg-warning text-dark mb-2">Language Expert</span>
-                                        <p class="card-text small">Dedicated to immersive language learning experiences.</p>
-                                        <a href="teacher-profiles/teacher-david-chen.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                             <div class="col-md-4 mb-4" data-aos="slide-up" data-aos-delay="100">
-                                <div class="card featured-teacher-card h-100 shadow-sm">
-                                    <img src="images/profile-pics/emily-white.jpg" class="card-img-top" alt="Ms. Emily White"> <div class="card-body text-center">
-                                        <h5 class="card-title">Ms. Emily White</h5>
-                                        <span class="badge bg-primary mb-2">Artistic Guru</span>
-                                        <p class="card-text small">Nurturing artistic talents in young minds with creative projects.</p>
-                                        <a href="teacher-profiles/teacher-emily-white.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div id="featuredTeachersCarouselContainer"></div>
+        </section>
+        <script>
+        const teachers = [
+            [
+                {
+                    name: "Tr. Kafka",
+                    img: "images/profile-pics/Character_Kafka_Splash_Art.webp",
+                    alt: "Teacher Kafka",
+                    badge: { text: "Science Whiz", class: "bg-wood" },
+                    desc: "Making complex science fun and understandable for middle schoolers.",
+                    profile: "teacher-profiles/teacher-kafka.html"
+                },
+                {
+                    name: "Sir. SAM",
+                    img: "images/profile-pics/firefly_card.webp",
+                    alt: "Teacher Firefly (SAM)",
+                    badge: { text: "Music Maestro", class: "bg-wood" },
+                    desc: "Inspiring creativity through engaging music lessons for all ages.",
+                    profile: "teacher-profiles/teacher-sam.html"
+                },
+                {
+                    name: "Ms. Castorice",
+                    img: "images/profile-pics/castorice_card.webp",
+                    alt: "Teacher Castorice",
+                    badge: { text: "Language Expert", class: "bg-wood" },
+                    desc: "Dedicated to immersive language learning experiences.",
+                    profile: "teacher-profiles/teacher-castorice.html"
+                }
+            ],
+            [
+                {
+                    name: "Tr. Mon",
+                    img: "images/profile-pics/Mon.png",
+                    alt: "Teacher Mon",
+                    badge: { text: "Artistic Guru", class: "bg-wood" },
+                    desc: "Nurturing artistic talents in young minds with creative projects.",
+                    profile: "teacher-profiles/teacher-mon.html"
+                }
+            ]
+        ];
+
+        function createTeacherCard(teacher) {
+            return `
+            <div class="col-md-4 mb-4${teacher.hideMd ? ' d-none d-md-block' : ''}${teacher.hideLg ? ' d-none d-lg-block' : ''}" data-aos="slide-up" data-aos-delay="${teacher.delay || 100}">
+                <div class="card featured-teacher-card h-100 shadow-sm">
+                    <img src="${teacher.img}" class="card-img-top" alt="${teacher.alt}" style="max-height: 200px; object-fit: scale-down;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">${teacher.name}</h5>
+                        <span class="badge ${teacher.badge.class} mb-2">${teacher.badge.text}</span>
+                        <p class="card-text small">${teacher.desc}</p>
+                        <a href="${teacher.profile}" class="btn btn-outline-wood btn-sm">View Profile</a>
                     </div>
                 </div>
+            </div>
+            `;
+        }
+
+        function renderCarousel() {
+            let indicators = '';
+            let inner = '';
+            teachers.forEach((slide, i) => {
+                indicators += `<button type="button" data-bs-target="#featuredTeachersCarousel" data-bs-slide-to="${i}"${i===0?' class="active" aria-current="true"':''} aria-label="Slide ${i+1}"></button>`;
+                let row = '<div class="row justify-content-center">';
+                slide.forEach((teacher, idx) => {
+                    // Responsive hiding for 2nd and 3rd cards in first slide
+                    if (i === 0) {
+                        if (idx === 1) teacher.hideMd = true;
+                        if (idx === 2) teacher.hideLg = true;
+                        teacher.delay = (idx+1)*100;
+                    }
+                    row += createTeacherCard(teacher);
+                });
+                row += '</div>';
+                inner += `<div class="carousel-item${i===0?' active':''}">${row}</div>`;
+            });
+
+            document.getElementById('featuredTeachersCarouselContainer').innerHTML = `
+            <div id="featuredTeachersCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">${indicators}</div>
+                <div class="carousel-inner">${inner}</div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#featuredTeachersCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -156,7 +130,11 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </section>
+            `;
+        }
+
+        renderCarousel();
+        </script>
     </main>
 
     <div id="footer-placeholder"></div>

@@ -28,6 +28,16 @@ const teachers = [
             location: "Riverdale",
             profile: "teacher-profiles/teacher-castorice.html",
             description: "Bringing creativity and joy to music education for young learners."
+        },
+        {
+            name: "Tr. Mon",
+            img: "images/profile-pics/Mon.png",
+            alt: "Teacher Mon",
+            subjects: ["Coding"],
+            grades: ["Primary", "Middle School"],
+            location: "Yangon",
+            profile: "teacher-profiles/teacher-mon.html",
+            description: "Bringing creativity and joy to code education for young learners."
         }
     ];
 
@@ -55,7 +65,7 @@ const teachers = [
                         <p class="card-text text-muted small">Grades: ${teacher.grades.join(', ')}</p>
                         <p class="card-text text-muted small">Location: ${teacher.location}</p>
                         <p class="card-text flex-grow-1">${teacher.description}</p>
-                        <a href="${teacher.profile}" class="btn btn-primary mt-auto align-self-start">View Profile</a>
+                        <a href="${teacher.profile}" class="btn btn-wood mt-auto align-self-start">View Profile</a>
                     </div>
                 </div>
             </div>

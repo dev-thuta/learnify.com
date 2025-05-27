@@ -25,6 +25,7 @@ h6 {
 .navbar-brand img {
     margin-right: 8px;
 }
+
 /* --- Custom Bootstrap Buttons --- */
 .btn {
     font-family: 'Montserrat', sans-serif;
@@ -59,6 +60,12 @@ h6 {
     color: #fff;
     border-color: hsl(25, 80%, 10%);
 }
+
+.bg-wood {
+    background-color: hsl(25, 50%, 20%) !important;
+    color: #fff !important;
+}
+
 /* --- Animation Specific Styling --- */
 /* Example: Smooth scroll for anchor links */
 html {
@@ -632,4 +639,115 @@ footer .fab:hover {
 
 .social-links-mark a:hover {
     color: hsl(25, 80%, 10%);
+}
+
+/* about */
+
+.about-header {
+    background-color: hsl(25, 50%, 10%);
+    /* Primary color */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-header h1 {
+    color: white;
+    /* Override default heading color */
+}
+
+.mission-section,
+.team-section,
+.purpose-section {
+    padding: 60px 0;
+}
+
+.team-member-card {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: hsl(25, 80%, 10%);
+    /* Primary Color */
+    margin-bottom: 1rem;
+}
+
+/* featured */
+
+.featured-teacher-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Ensures image corners are rounded with the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-teacher-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.featured-teacher-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid hsl(25, 80%, 10%);
+    /* Accent color border */
+}
+
+.featured-teacher-card .card-body {
+    padding: 1.5rem;
+}
+
+.featured-teacher-card .card-title {
+    color: hsl(25, 80%, 10%);
+    /* Primary color */
+}
+
+.featured-teacher-card .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 15px;
+    /* Increase padding to make controls larger */
+}
+
+/* Specific styling for "Teacher of the Month" section */
+.teacher-of-the-month {
+    background-color: #e9f5ff;
+    /* Light blue highlight */
+    padding: 40px 20px;
+    border-radius: 15px;
+    border: 2px dashed hsl(25, 80%, 10%);
+}
+
+.teacher-of-the-month img {
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-of-the-month .display-4 {
+    color: hsl(25, 80%, 10%);
+    /* Darker blue for emphasis */
 }
